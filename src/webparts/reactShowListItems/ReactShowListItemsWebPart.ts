@@ -21,7 +21,8 @@ export default class ReactShowListItemsWebPart extends BaseClientSideWebPart<IRe
     const element: React.ReactElement<IReactShowListItemsProps > = React.createElement(
       ReactShowListItems,
       {
-        description: this.properties.description
+        description: this.properties.description,
+        websiteurl: this.context.pageContext.web.absoluteUrl
       }
     );
 
